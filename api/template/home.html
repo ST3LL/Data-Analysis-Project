@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+<body>
+<section class="main_frame">
+    <h1>Which Dataset?</h1>
+    <form class="form-inline" method="POST" action="/prediction/">
+        <label>Select a dataset</label>
+        <div class="select" style="margin: auto; margin-bottom: 75px;">
+            <select id="dataset_selected" name="dataset_selected" class="selectpicker form-control">
+                {% for m in dataset %}
+                <option value="{{ m }}">{{ m }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+
+    <h1>Features Input:</h1>
+    <form class="form-inline" method="POST" action="/prediction/">
+        <label>Which Dimension for the Grid</label>
+        <div>
+            <div class="selectpicker form-control">
+                <p>Temperature</p>
+                <input type="text" id="temperature" name="temperature" placeholder="in °C">
+                <p>Hour</p>
+                <input type="text" id="hour" name="hour" placeholder="from 0 to 23">
+                <p>Seasons</p>
+                <input type="text" id="seasons" name="seasons" placeholder="W, SP, SU or A">
+                <p>Solar Radiation</p>
+                <input type="text" id="solar_radiation" name="solar_radiation" placeholder="...">
+                <p>Visibility</p>
+                <input type="text" id="visibility" name="visibility" placeholder="...">
+                <p>Month</p>
+                <input type="text" id="month" name="month" placeholder="From 1 to 12">
+                <p>Wind Speed</p>
+                <input type="text" id="wind_speed" name="wind_speed" placeholder="...">
+                <p>Business Day?</p>
+                <input type="text" id="business_day" name="business_day" placeholder="0: False or 1: True">
+                <br>
+                <button type="submit" class="btn">Predict!</button>
+            </div>
+        </div>
+    </form>
+</section>
+</body>
