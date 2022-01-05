@@ -1,0 +1,61 @@
+body {
+    width: 90%;
+	margin: auto;
+	position: relative;
+	min-height: 100vh;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 600;
+}
+
+.main_frame {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+
+select
+{
+    outline: 0;
+    border: 0 !important;
+    background: #df581e;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select
+{
+    position: relative;
+    display: block;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #df581e;
+    overflow: hidden;
+    border-radius: .25em;
+}
+
+
+button{
+    outline: 0;
+    border: 0;
+    background: #df581e;
+    height: 40px;
+    margin-top: 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: .25em;
+    position: center;
+}
+
+.button:hover::after{
+    color: #f39c12;
+}
+
